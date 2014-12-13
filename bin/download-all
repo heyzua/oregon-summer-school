@@ -4,5 +4,5 @@ set -e
 set -x
 
 for yaml in data/*.yml; do
-  ./bin/genlectures -y $yaml
+  ./bin/genlectures -y $yaml $@
 done

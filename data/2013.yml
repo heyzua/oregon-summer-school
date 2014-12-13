@@ -9,116 +9,139 @@ courses:
     notes:
       - name: "Slides"
         url: "lectures/ahmed_official1.pd"
+        type: "pdf"
       - name: "Unofficial Notes from Edward Z. Yang [part 1]"
         url: "lectures/ahmed-1.pdf"
+        type: "pdf"
       - name: "Unofficial Notes from Edward Z. Yang [part 2]"
         url: "lectures/ahmed-2.pdf"
+        type: "pdf"
       - name: "Unofficial Notes from Edward Z. Yang [part 3]"
         url: "lectures/ahmed-3.pdf"
+        type: "pdf"
       - name: "Unofficial Notes from Edward Z. Yang [part 4]"
         url: "lectures/ahmed-4.pdf"
+        type: "pdf"
       - name: "Unofficial Notes from Edward Z. Yang [part 5]"
         url: "lectures/ahmed-5.pdf"
+        type: "pdf"
     lectures:
-      - urls: ["lectures/ahmed1-1.mp4", "lectures/ahmed1-2.mp4", "lectures/ahmed1-3.mp4"]
-      - urls: ["lectures/ahmed2-1.mp4", "lectures/ahmed2-2.mp4", "lectures/ahmed2-3.mp4"]
-      - urls: ["lectures/ahmed3-1.mp4", "lectures/ahmed3-2.mp4", "lectures/ahmed3-3.mp4"]
-      - urls: ["lectures/ahmed4-1.mp4", "lectures/ahmed4-2.mp4", "lectures/ahmed4-3.mp4"]
-      - urls: ["lectures/ahmed5-1.mp4", "lectures/ahmed5-2.mp4", "lectures/ahmed5-3.mp4", "lectures/ahmed5-4.mp4"]
-      - urls: ["lectures/ahmed6-1.mp4", "lectures/ahmed6-2.mp4", "lectures/ahmed6-3.mp4"]
+      - ["lectures/ahmed1-1.mp4", "lectures/ahmed1-2.mp4", "lectures/ahmed1-3.mp4"]
+      - ["lectures/ahmed2-1.mp4", "lectures/ahmed2-2.mp4", "lectures/ahmed2-3.mp4"]
+      - ["lectures/ahmed3-1.mp4", "lectures/ahmed3-2.mp4", "lectures/ahmed3-3.mp4"]
+      - ["lectures/ahmed4-1.mp4", "lectures/ahmed4-2.mp4", "lectures/ahmed4-3.mp4"]
+      - ["lectures/ahmed5-1.mp4", "lectures/ahmed5-2.mp4", "lectures/ahmed5-3.mp4", "lectures/ahmed5-4.mp4"]
+      - ["lectures/ahmed6-1.mp4", "lectures/ahmed6-2.mp4", "lectures/ahmed6-3.mp4"]
 
   - name: Type Theory Foundations
     speaker: Robert Harper
     notes:
-      - name: "Programming in Martin-L&ouml;f's Type Theory"
-        url: "http://www.cse.chalmers.se/research/group/logic/book/"
+      - name: "Programming in Martin-Löf's Type Theory"
+        url: 'http://www.cse.chalmers.se/research/group/logic/book/book.pdf'
+        type: 'pdf'
       - name: "Part 1"
         url: "lectures/harper-1.pdf"
+        type: "pdf"
       - name: "Part 2"
         url: "lectures/harper-2.pdf"
+        type: "pdf"
       - name: "Part 3"
         url: "lectures/harper-3.pdf"
+        type: "pdf"
       - name: "Part 4"
         url: "lectures/harper-4.pdf"
+        type: "pdf"
     lectures:
-      - urls: ["lectures/harper1-1.mp4", "lectures/harper1-2.mp4", "lectures/harper1-3.mp4"]
-      - urls: ["lectures/harper2-1.mp4", "lectures/harper2-2.mp4", "lectures/harper2-3.mp4"]
-      - urls: ["lectures/harper3-1.mp4", "lectures/harper3-2.mp4", "lectures/harper3-3.mp4"]
-      - urls: ["lectures/harper4-1.mp4", "lectures/harper4-2.mp4", "lectures/harper4-3.mp4", "lectures/harper4-4.mp4"]
-      - urls: ["lectures/harper5-1.mp4", "lectures/harper5-2.mp4", "lectures/harper5-3.mp4"]
+      - ["lectures/harper1-1.mp4", "lectures/harper1-2.mp4", "lectures/harper1-3.mp4"]
+      - ["lectures/harper2-1.mp4", "lectures/harper2-2.mp4", "lectures/harper2-3.mp4"]
+      - ["lectures/harper3-1.mp4", "lectures/harper3-2.mp4", "lectures/harper3-3.mp4"]
+      - ["lectures/harper4-1.mp4", "lectures/harper4-2.mp4", "lectures/harper4-3.mp4", "lectures/harper4-4.mp4"]
+      - ["lectures/harper5-1.mp4", "lectures/harper5-2.mp4", "lectures/harper5-3.mp4"]
 
   - name: Dependently-typed Programming in Agda
     speaker: Dan Licata
     notes:
       - name: "OPLSS page"
         url: "http://www.cs.cmu.edu/~drl/teaching/oplss13/"
+        type: "website"
     lectures:
-      - urls: ["lectures/licata1-1.mp4", "lectures/licata1-2.mp4", "lectures/licata1-3.mp4"]
-      - urls: ["lectures/licata2-1.mp4", "lectures/licata2-2.mp4", "lectures/licata2-3.mp4", "lectures/licata2-4.mp4"]
-      - urls: ["lectures/licata3-1.mp4", "lectures/licata3-2.mp4", "lectures/licata3-3.mp4"]
-      - urls: ["lectures/licata4-1.mp4", "lectures/licata4-2.mp4", "lectures/licata4-3.mp4", "lectures/licata4-4.mp4"]
-      - urls: ["lectures/licata5-1.mp4", "lectures/licata5-2.mp4", "lectures/licata5-3.mp4"]
+      - ["lectures/licata1-1.mp4", "lectures/licata1-2.mp4", "lectures/licata1-3.mp4"]
+      - ["lectures/licata2-1.mp4", "lectures/licata2-2.mp4", "lectures/licata2-3.mp4", "lectures/licata2-4.mp4"]
+      - ["lectures/licata3-1.mp4", "lectures/licata3-2.mp4", "lectures/licata3-3.mp4"]
+      - ["lectures/licata4-1.mp4", "lectures/licata4-2.mp4", "lectures/licata4-3.mp4", "lectures/licata4-4.mp4"]
+      - ["lectures/licata5-1.mp4", "lectures/licata5-2.mp4", "lectures/licata5-3.mp4"]
 
   - name: Adventures with types in Haskell
     speaker: Simon Peyton-Jones
     notes:
       - name: "Lecture 1 Slides"
         url: "lectures/ClassesJimOPLSS.pdf"
+        type: "pdf"
       - name: "System FC in GHC"
         url: "lectures/FC_in_GHC_July13.pdf"
+        type: "pdf"
       - name: "Kinds and GADTs"
         url: "lectures/Kinds_and_GADTs.pdf"
+        type: "pdf"
       - name: "Type Inference"
         url: "lectures/Type_inference.pdf"
+        type: "pdf"
       - name: "Fun With Type Functions"
         url: "lectures/FunWithTypeFuns.pdf"
+        type: "pdf"
     lectures:
-      - urls: ["lectures/jones1-1.mp4", "lectures/jones1-2.mp4", "lectures/jones1-3.mp4"]
-      - urls: ["lectures/jones2-1.mp4", "lectures/jones2-2.mp4"]
-      - urls: ["lectures/jones3-1.mp4", "lectures/jones3-2.mp4", "lectures/jones3-3.mp4"]
-      - urls: ["lectures/jones4-1.mp4", "lectures/jones4-2.mp4", "lectures/jones4-3.mp4"]
+      - ["lectures/jones1-1.mp4", "lectures/jones1-2.mp4", "lectures/jones1-3.mp4"]
+      - ["lectures/jones2-1.mp4", "lectures/jones2-2.mp4"]
+      - ["lectures/jones3-1.mp4", "lectures/jones3-2.mp4", "lectures/jones3-3.mp4"]
+      - ["lectures/jones4-1.mp4", "lectures/jones4-2.mp4", "lectures/jones4-3.mp4"]
 
   - name: Linear Logic and Session-based Concurrency
     speaker: Frank Pfenning
     notes:
       - name: "Part 1"
         url: "lectures/pfenning-1.pdf"
+        type: "pdf"
       - name: "Part 2"
         url: "lectures/pfenning-2.pdf"
+        type: "pdf"
       - name: "Part 3"
         url: "lectures/pfenning-3.pdf"
+        type: "pdf"
       - name: "Part 4"
         url: "lectures/pfenning-4.pdf"
+        type: "pdf"
       - name: "Part 5"
         url: "lectures/pfenning-5.pdf"
+        type: "pdf"
     lectures:
-      - urls: ["lectures/pfenning1-1.mp4", "lectures/pfenning1-2.mp4", "lectures/pfenning1-3.mp4"]
-      - urls: ["lectures/pfenning2-1.mp4", "lectures/pfenning2-2.mp4", "lectures/pfenning2-3.mp4"]
-      - urls: ["lectures/pfenning3-1.mp4", "lectures/pfenning3-2.mp4", "lectures/pfenning3-3.mp4"]
-      - urls: ["lectures/pfenning4-1.mp4", "lectures/pfenning4-2.mp4", "lectures/pfenning4-3.mp4"]
-      - urls: ["lectures/pfenning5-1.mp4", "lectures/pfenning5-2.mp4", "lectures/pfenning5-3.mp4"]
+      - ["lectures/pfenning1-1.mp4", "lectures/pfenning1-2.mp4", "lectures/pfenning1-3.mp4"]
+      - ["lectures/pfenning2-1.mp4", "lectures/pfenning2-2.mp4", "lectures/pfenning2-3.mp4"]
+      - ["lectures/pfenning3-1.mp4", "lectures/pfenning3-2.mp4", "lectures/pfenning3-3.mp4"]
+      - ["lectures/pfenning4-1.mp4", "lectures/pfenning4-2.mp4", "lectures/pfenning4-3.mp4"]
+      - ["lectures/pfenning5-1.mp4", "lectures/pfenning5-2.mp4", "lectures/pfenning5-3.mp4"]
 
   - name: Software Foundations in Coq
     speaker: Andrew Tolmach
     lectures:
-      - urls: ["lectures/tolmach1-1.mp4", "lectures/tolmach1-2.mp4", "lectures/tolmach1-3.mp4"]
-      - urls: ["lectures/tolmach2-1.mp4", "lectures/tolmach2-2.mp4", "lectures/tolmach2-3.mp4"]
-      - urls: ["lectures/tolmach3-1.mp4", "lectures/tolmach3-2.mp4", "lectures/tolmach3-3.mp4"]
-      - urls: ["lectures/tolmach4-1.mp4", "lectures/tolmach4-2.mp4", "lectures/tolmach4-3.mp4"]
+      - ["lectures/tolmach1-1.mp4", "lectures/tolmach1-2.mp4", "lectures/tolmach1-3.mp4"]
+      - ["lectures/tolmach2-1.mp4", "lectures/tolmach2-2.mp4", "lectures/tolmach2-3.mp4"]
+      - ["lectures/tolmach3-1.mp4", "lectures/tolmach3-2.mp4", "lectures/tolmach3-3.mp4"]
+      - ["lectures/tolmach4-1.mp4", "lectures/tolmach4-2.mp4", "lectures/tolmach4-3.mp4"]
 
   - name: Designing Dependently-Typed Programming Languages
     speaker: Stephanie Weirich
     lectures:
-      - urls: ["lectures/weirich1-1.mp4", "lectures/weirich1-2.mp4", "lectures/weirich1-3.mp4"]
-      - urls: ["lectures/weirich2-1.mp4", "lectures/weirich2-2.mp4", "lectures/weirich2-3.mp4"]
-      - urls: ["lectures/weirich3-1.mp4", "lectures/weirich3-2.mp4", "lectures/weirich3-3.mp4"]
+      - ["lectures/weirich1-1.mp4", "lectures/weirich1-2.mp4", "lectures/weirich1-3.mp4"]
+      - ["lectures/weirich2-1.mp4", "lectures/weirich2-2.mp4", "lectures/weirich2-3.mp4"]
+      - ["lectures/weirich3-1.mp4", "lectures/weirich3-2.mp4", "lectures/weirich3-3.mp4"]
 
   - name: Verifying LLVM Optimizations in Coq
     speaker: Steve Zdancewic
     notes:
-      - name: Lecture Slides
+      - name: "Lecture Slides"
         url: "lectures/zdancewic-oplss.pdf"
+        type: "pdf"
     lectures:
-      - urls: ["lectures/zdancewic1-1.mp4", "lectures/zdancewic1-2.mp4", "lectures/zdancewic1-3.mp4"]
-      - urls: ["lectures/zdancewic2-1.mp4", "lectures/zdancewic2-2.mp4", "lectures/zdancewic2-3.mp4"]
-      - urls: ["lectures/zdancewic3-1.mp4", "lectures/zdancewic3-2.mp4", "lectures/zdancewic3-3.mp4"]
+      - ["lectures/zdancewic1-1.mp4", "lectures/zdancewic1-2.mp4", "lectures/zdancewic1-3.mp4"]
+      - ["lectures/zdancewic2-1.mp4", "lectures/zdancewic2-2.mp4", "lectures/zdancewic2-3.mp4"]
+      - ["lectures/zdancewic3-1.mp4", "lectures/zdancewic3-2.mp4", "lectures/zdancewic3-3.mp4"]

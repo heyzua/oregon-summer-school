@@ -32,11 +32,10 @@ class Downloader
   end
 
   def download_videos!
-    @course['lectures'].each_with_index do |lecture, i|
-      urls = lecture['urls']
+    @course['lectures'].each_with_index do |urls, i|
       extension = File.extname(urls[0])
 
-      lecture_name = "#{@course['name']} - #{@course['speaker']} - Lecture #{i + 1}#{extension}"
+      lecture_name = "#{course_name} - Lecture #{i + 1}#{extension}"
       path = File.join(@output_dir, lecture_name)
       next if File.exists?(path)
 
@@ -46,10 +45,71 @@ class Downloader
   end
 
   def download_notes!(browser)
+    return unless @course['notes']
 
+    course_path = File.join(@output_dir, course_name)
+    FileUtils.mkdir_p(course_path)
+
+    @course['notes'].each do |note|
+      uri = if note['url'] =~ /^https?:/
+              URI.parse(note['url'])
+            else
+              URI.join(@base_url, note['url'])
+            end
+
+      case note['type']
+      when 'pdf' 
+        pdf_path = File.join(course_path, "#{note['name']}.pdf")
+       
+        while_unable_to_download(uri, pdf_path) do
+          $stderr.puts "Unable to download pdf: #{uri.to_s}"
+        end
+      when 'website' 
+        website_script = File.join(course_path, "#{note['name']}.sh")
+
+        File.open(website_script, 'w') do |io|
+          io.write """#!/bin/bash
+
+set -e
+firefox #{uri.to_s}
+"""
+        end
+
+        FileUtils.chmod 0774, website_script
+      when 'directory' 
+        download_directory = File.join(course_path, note['name'])
+        FileUtils.mkdir_p(download_directory)
+
+        Net::HTTP.get(uri).scan(/<a href=["'](.*?)['"]/) do |match|
+          match.each do |path|
+            next unless path =~ /\.(pdf|zip)$/ 
+
+            local_path = File.join(download_directory, path)
+            uri  = URI.join(uri, URI.escape(path))
+
+            while_unable_to_download(uri, local_path) do
+              $stderr.puts "Unable to download: #{uri.to_s}"
+            end
+          end
+        end
+      when 'jpg'
+        jpg_path = File.join(course_path, "#{note['name']}.jpg")
+       
+        while_unable_to_download(uri, jpg_path) do
+          $stderr.puts "Unable to download jpg: #{uri.to_s}"
+        end
+      else
+        $stderr.puts "Unknown note type: '#{note['type']}' for '#{note['name']}'"
+        exit 1
+      end
+    end
   end
 
   private
+  def course_name
+    "#{@course['name']} - #{@course['speaker']}"
+  end
+
   def download_urls(urls)
     result = []
     urls.each do |url|
@@ -58,56 +118,71 @@ class Downloader
       path = File.join(@output_dir, "#{name}#{extension}")
       result << path
 
-      if File.exists?(path)
-        $stdout.puts "Already downloaded '#{File.basename(url)}' to '#{path}'"
-        next
-      end
       video = URI.join(@base_url, url)
 
-      $stdout.puts "Retrieving: #{video.to_s}"
-
-      while backoff = trying_to_retrieve_video(video, path)
-        $stderr.puts "Unable to download video: #{video.host}"
-        $stderr.puts "Retrying in #{backoff} seconds."
-        sleep(backoff * 1000)
+      while_unable_to_download(video, path) do
+        $stderr.puts "Unable to download video: #{video.to_s}"
       end
     end
     result
   end
 
-  def trying_to_retrieve_video(video, path)
+  def while_unable_to_download(uri, path, &block)
+    while backoff = trying_to_download(uri, path)
+      yield
+      $stderr.puts "Retrying in #{backoff} seconds."
+      sleep(backoff)
+    end
+  end
+
+  def trying_to_download(uri, path)
+    return nil if File.exists?(path)
+    $stdout.puts "Retrieving: #{uri.to_s}"
+
     @iteration ||= 1
 
-    Net::HTTP.start(video.host, video.port) do |http|
-      request = Net::HTTP::Get.new video
+    Net::HTTP.start(uri.host, uri.port) do |http|
+      request = Net::HTTP::Get.new uri
 
       ticker = 0
+      modulo = if uri.to_s =~ /\.mp4$/
+                 1000
+               else
+                 10
+               end
 
       http.request request do |response|
-        if response.code != "200"
-          backoff = (2.0 ** @iteration).to_i
-          @iteration += 1
-          return backoff
-        end
-
-        File.open(path, 'w') do |io|
+        case response.code
+        when /20./ then
           size = 0
 
-          response.read_body do |chunk|
-            size += chunk.bytesize
-            if ticker == 0
-              $stdout.write "\rWriting to: #{path}    [#{format_bytes(size)}]     "
+          File.open(path, 'w') do |io|
+            response.read_body do |chunk|
+              size += chunk.bytesize
+              if ticker == 0
+                $stdout.write "Writing to: #{path}    [#{format_bytes(size)}]\r"
+              end
+
+              io.write chunk
+
+              ticker += 1
+              ticker %= modulo
             end
-
-            io.write chunk
-
-            ticker += 1
-            ticker %= 1000
           end
-        end
 
-        $stdout.write "\n"
-        return nil
+          $stdout.puts "Writing to: #{path}    [#{format_bytes(size)}]"
+          return nil
+        when /40./
+          $stderr.puts "FATAL ERROR! Unable to download: #{uri.to_s}"
+          return nil
+        else
+          $stderr.puts "Bad response from server: #{response.code}"
+
+          backoff = (2.0 ** @iteration).to_i
+          @iteration += 1
+
+          return backoff
+        end
       end
     end
   end
@@ -156,17 +231,11 @@ $cmd = Choosy::Command.new :genlectures do
       "The directory to put the completed lectures, by year.",
       default: 'lectures'
 
-    boolean :videos,
-      "Whether to include the videos. Defaults to true.",
-      default: true,
-      short: false,
-      negate: 'no'
+    boolean :'skip-videos',
+      "Skip downloading and colating the videos."
 
-    boolean :notes,
-      "Whether to include the notes. Defaults to true.",
-      default: true,
-      short: false,
-      negate: 'no'
+    boolean :'no-notes',
+      "Don't download any of the notes."
 
     string :browser,
       "Whatever browser to use to open external web pages. Defaults to 'firefox'.",
@@ -195,8 +264,8 @@ $cmd = Choosy::Command.new :genlectures do
 
     courses.each do |course|
       downloader = Downloader.new(options[:yaml]['url'], out_dir, course)
-      downloader.download_videos! if options[:videos]
-      downloader.download_notes!(options[:browser]) if options[:notes]
+      downloader.download_videos! unless options[:'skip-videos']
+      downloader.download_notes!(options[:browser]) unless options[:'no-notes']
     end
   end
 end
