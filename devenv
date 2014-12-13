@@ -1,10 +1,7 @@
 #!/bin/bash
 
-set -x
-
 if ! [ -f Dockerfile ]; then
-  cat Dockerfile.template | sed -e "s#HOME#${HOME}#g" -e "s/USER/${LOGNAME}/g" -e "s/UID/$(id -u ${USER})/g"
-  exit 1
+  cat Dockerfile.template | sed -e "s#HOME#${HOME}#g" -e "s/USER/${LOGNAME}/g" -e "s/UID/$(id -u ${USER})/g" > Dockerfile
 fi
 
 if [ "$DOCKER" = "IN" ]; then

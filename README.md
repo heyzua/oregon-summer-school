@@ -2,7 +2,7 @@
 
 This is a small environment for downloading all of the various lectures and course notes for the Oregon Summer School in Programming Languages. It covers the years 2012-2014.
 
-This uses a Docker container to best replicate the environment in which the tool seems to work. It assumes that you have Docker already installed on your machine.
+This uses a Docker container to best replicate the environment in which the tool seems to work. It assumes that you have Docker already installed on your machine and that you're working in a UNIX-like environment, that defines things like the environment variables `HOME`, `USER`, and the tool `id`.
 
 ## Usage
 
@@ -12,7 +12,7 @@ In order to download the lectures and associated notes, you will need to run:
 $ ./devenv
 ```
 
-That should create the Dockerfile, create the Docker image necessary to download the lectures, and start a container inside the current directory (which is assumed to live under your home directory.
+That should create the Dockerfile, create the Docker image necessary to download the lectures, and start a container inside the current directory (which is assumed to live under your home directory).
 
 Next, while in the container, simply run:
 
