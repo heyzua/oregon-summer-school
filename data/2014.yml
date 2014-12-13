@@ -1,0 +1,104 @@
+name: "Types, Logic, and Verification"
+location: "Oregon Programming Languages Summer School -- June 16-28"
+year: 2014
+url: "http://www.cs.uoregon.edu/research/summerschool/summer14/curriculum.html"
+
+courses:
+  - name: Software Verification
+    speaker: Andrew Appel
+    lectures:
+      - urls: ["media/Andrew1-1.mp4", "media/Andrew1-2.mp4"]
+      - urls: ["media/Andrew2-1.mp4", "media/Andrew2-2.mp4"]
+      - urls: ["media/Andrew3-1.mp4", "media/Andrew3-2.mp4"]
+      - urls: ["media/Andrew4-1.mp4", "media/Andrew4-2.mp4"]
+
+  - name: Category Theory
+    speaker: Lars Birkedal
+    notes:
+      - name: Notes
+        url: "http://users-cs.au.dk/birke/modures/tutorial/categorical-logic-tutorial-notes.pdf"
+    lectures:
+      - urls: ["media/Lars1-1.mp4", "media/Lars1-2.mp4", "media/Lars1-3.mp4"]
+      - urls: ["media/Lars2-1.mp4", "media/Lars2-2.mp4", "media/Lars2-3.mp4"]
+      - urls: ["media/Lars3-1.mp4", "media/Lars3-2.mp4"]
+      - urls: ["media/Lars4-1.mp4", "media/Lars4-2.mp4", "media/Lars4-3.mp4"]
+      - urls: ["media/Lars5-1.mp4", "media/Lars5-2.mp4"]
+
+  - name: Parametricity and Relational Reasoning
+    speaker: Derek Dreyer
+    notes:
+      - name: Left Board
+        url: "lectures/DDleft1.jpg"
+      - name: Right Board
+        url: "lectures/DDright1.jpg"
+      - name: Slides
+        url: "lectures/dreyer1.pdf"
+    lectures:
+      - urls: ["media/Derek1-1.mp4", "media/Derek1-2.mp4", "media/Derek1-3.mp4"]
+      - urls: ["media/Derek2-1.mp4", "media/Derek2-2.mp4", "media/Derek2-3.mp4"]
+      - urls: ["media/Derek3-1.mp4", "media/Derek3-2.mp4", "media/Derek3-3.mp4"]
+      - urls: ["media/Derek4-1.mp4", "media/Derek4-2.mp4", "media/Derek4-3.mp4"]
+
+  - name: Type Theory Foundations
+    speaker: Robert Harper
+    notes:
+      - name: Preparation Notes
+        url: "rwh_notes"
+    lectures:
+      - urls: ["media/Bob1-1.mp4", "media/Bob1-2.mp4", "media/Bob1-3.mp4"]
+      - urls: ["media/Bob2-1.mp4", "media/Bob2-2.mp4", "media/Bob2-3.mp4"]
+      - urls: ["media/Bob3-1.mp4", "media/Bob3-2.mp4", "media/Bob3-3.mp4"]
+      - urls: ["media/Bob4-1.mp4", "media/Bob4-2.mp4", "media/Bob4-3.mp4"]
+
+  - name: Programming in Agda
+    speaker: Ulf Norell
+    lectures:
+      - urls: ["media/Ulf1-1.mp4", "media/Ulf1-2.mp4", "media/Ulf1-3.mp4"]
+      - urls: ["media/Ulf2-1.mp4", "media/Ulf2-2.mp4", "media/Ulf2-3.mp4"]
+      - urls: ["media/Ulf3-1.mp4", "media/Ulf3-2.mp4", "media/Ulf3-3.mp4"]
+      - urls: ["media/Ulf4-1.mp4", "media/Ulf4-2.mp4", "media/Ulf4-3.mp4"]
+
+  - name: Certified Programming and State
+    speakers: Greg Morrisett
+    lectures:
+      - urls: ["media/Greg1-1.mp4", "media/Greg1-2.mp4", "media/Greg1-3.mp4"]
+      - urls: ["media/Greg2-1.mp4", "media/Greg2-2.mp4", "media/Greg2-3.mp4"]
+      - urls: ["media/Greg3-1.mp4", "media/Greg3-2.mp4", "media/Greg3-3.mp4"]
+      - urls: ["media/Greg4-1.mp4", "media/Greg4-2.mp4", "media/Greg4-3.mp4"]
+
+  - name: Proof Theory Foundations
+    speaker: Brigitte Pientka
+    notes:
+      - name: Notes
+        url: "http://www.cs.mcgill.ca/~bpientka/oplss/"
+    lectures:
+      - urls: ["media/Brigitte1-1.mp4", "media/Brigitte1-2.mp4", "media/Brigitte1-3.mp4"]
+      - urls: ["media/Brigitte2-1.mp4", "media/Brigitte2-2.mp4", "media/Brigitte2-3.mp4"]
+      - urls: ["media/Brigitte3-1.mp4", "media/Brigitte3-2.mp4", "media/Brigitte3-3.mp4"]
+      - urls: ["media/Brigitte4-1.mp4", "media/Brigitte4-2.mp4", "media/Brigitte4-3.mp4"]
+
+  - name: Designing Dependently-Typed Programming Languages
+    speaker: Stephanie Weirich
+    notes:
+      - name: Pi-Forall
+        url: "https://github.com/sweirich/pi-forall/tree/2014"
+    lectures:
+      - urls: ["media/Stephanie1-1.mp4", "media/Stephanie1-2.mp4", "media/Stephanie1-3.mp4"]
+      - urls: ["media/Stephanie2-1.mp4", "media/Stephanie2-2.mp4", "media/Stephanie2-3.mp4"]
+      - urls: ["media/Stephanie3-1.mp4", "media/Stephanie3-2.mp4", "media/Stephanie3-3.mp4"]
+      - urls: ["media/Stephanie4-1.mp4", "media/Stephanie4-2.mp4", "media/Stephanie4-3.mp4"]
+
+  - name: Software Foundations in Coq
+    speaker: Steve Zdancewic
+    notes:
+      - name: Slides
+        url: "lectures/zdancewic-sf-lec01.pdf"
+    lectures:
+      - urls: ["media/Steve1-1.mp4", "media/Steve1-2.mp4", "media/Steve1-3.mp4"]
+      - urls: ["media/Steve2-1.mp4", "media/Steve2-2.mp4", "media/Steve2-3.mp4"]
+      - urls: ["media/Steve3-1.mp4", "media/Steve3-2.mp4", "media/Steve3-3.mp4"]
+      - urls: ["media/Steve4-1.mp4", "media/Steve4-2.mp4", "media/Steve4-3.mp4"]
+  - name: Featured Lectures
+    speaker: Tom Ball
+    lectures:
+      - urls: ["media/Tom1-1.mp4", "media/Tom1-2.mp4", "media/Tom1-3.mp4"]

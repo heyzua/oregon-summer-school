@@ -1,0 +1,139 @@
+name: 'Logic, Languages, Compilation, and Verification'
+location: 'Oregon Programming Languages Summer School -- July 16-28'
+year: 2012
+url: 'http://www.cs.uoregon.edu/research/summerschool/summer12/curriculum.html'
+
+courses:
+  - name: Logical relations
+    speaker: Amal Ahmed
+    lectures:
+      - urls: ['videos/Ahmed1_0.mp4', 'videos/Ahmed1_1.mp4', 'videos/Ahmed1_2.mp4']
+      - urls: ['videos/Ahmed2_0.mp4', 'videos/Ahmed2_1.mp4', 'videos/Ahmed2_2.mp4']
+      - urls: ['videos/Ahmed3_1.mp4', 'videos/Ahmed3_2.mp4', 'videos/Ahmed3_3.mp4']
+      - urls: ['videos/Ahmed4_1.mp4', 'videos/Ahmed4_2.mp4', 'videos/Ahmed4_3.mp4']
+      - urls: ['videos/Ahmed5_1.mp4', 'videos/Ahmed5_2.mp4', 'videos/Ahmed5_3.mp4']
+
+  - name: Category theory foundations
+    speaker: Steve Awodey
+    notes:
+      - name: 'Overview of Category Theory'
+        url: 'http://www.andrew.cmu.edu/user/awodey/SummerSchool/notes.pdf'
+        type: 'pdf'
+      - name: 'Category Theory Book'
+        url: 'http://www.andrew.cmu.edu/course/80-413-713/notes/'
+        type: 'directory'
+      - name: 'Problem Sets'
+        url:  'http://www.andrew.cmu.edu/user/awodey/SummerSchool/HW/'
+        type: 'directory'
+    lectures:
+      - urls: ['videos/Awodey1_0.mp4', 'videos/Awodey1_1.mp4', 'videos/Awodey1_2.mp4']
+      - urls: ['videos/Awodey2_0.mp4', 'videos/Awodey2_1.mp4', 'videos/Awodey2_2.mp4']
+      - urls: ['videos/Awodey3_0.mp4', 'videos/Awodey3_1.mp4', 'videos/Awodey3_2.mp4']
+      - urls: ['videos/Awodey4_0.mp4', 'videos/Awodey4_1.mp4', 'videos/Awodey4_2.mp4']
+
+  - name: Proofs as Processes
+    speaker: Robert Constable
+    notes:
+      - name: 'Lectures 1 & 2'
+        url: 'lectures/OPLSS2012-Lect1-and-2.pdf'
+        type: 'pdf'
+    lectures:
+      - urls: ['videos/Constable1_0.mp4', 'videos/Constable1_1.mp4', 'videos/Constable1_2.mp4']
+      - urls: ['videos/Constable2_0.mp4', 'videos/Constable2_1.mp4', 'videos/Constable2_2.mp4']
+      - urls: ['videos/Constable3_0.mp4', 'videos/Constable3_1.mp4', 'videos/Constable3_2.mp4']
+
+  - name: Polarization and focalization
+    speaker: Pierre-Louis Curien
+    notes:
+      - name: 'Notes from OPLSS 2011'
+        url: 'lectures/Curien_system-L-illust.pdf'
+        type: 'pdf'
+      - name: 'Notes from University of Bath, Feb 2012 (updated July 19, 2012)'
+        url: 'lectures/Bath-2012.pdf'
+        type: 'pdf'
+      - name: 'Strong normalisation for focalising system L'
+        url: 'lectures/SN-L.pdf'
+        type: 'pdf'
+    lectures:
+      - urls: ['videos/Curien1_0.mp4', 'videos/Curien1_1.mp4', 'videos/Curien1_2.mp4']
+      - urls: ['videos/Curien2_0.mp4', 'videos/Curien2_1.mp4', 'videos/Curien2_2.mp4']
+      - urls: ['videos/Curien3_0.mp4', 'videos/Curien3_1.mp4', 'videos/Curien3_2.mp4']
+
+  - name: Type theory foundations
+    speaker: Robert Harper
+    notes:
+      - name: "Programming in Martin-Löf's Type Theory"
+        url: 'http://www.cse.chalmers.se/research/group/logic/book/book.pdf'
+        type: 'pdf'
+      - name: 'Proofs and Types'
+        url: 'http://www.paultaylor.eu/stable/prot.pdf'
+        type: 'pdf'
+      - name: 'Practical Foundations for Programming Languages'
+        url: 'http://www.cs.cmu.edu/~rwh/plbook/book.pdf'
+        type: 'pdf'
+      - name: 'Advanced Topics in Types and Programming Languages'
+        url: 'http://www.cis.upenn.edu/~bcpierce/attapl/'
+        type: 'website'
+      - name: "Normalization for Goedel's System T"
+        url: 'lectures/harper-Norm-SystemT.pdf'
+        type: 'pdf'
+    lectures:
+      - urls: ['videos/Harper1_0.mp4', 'videos/Harper1_1.mp4', 'videos/Harper1_2.mp4']
+      - urls: ['videos/Harper2_0.mp4', 'videos/Harper2_1.mp4', 'videos/Harper2_2.mp4']
+      - urls: ['videos/Harper3_0.mp4', 'videos/Harper3_1.mp4', 'videos/Harper3_2.mp4']
+      - urls: ['videos/Harper4_0.mp4', 'videos/Harper4_1.mp4', 'videos/Harper4_2.mp4']
+      - urls: ['videos/Harper5_0.mp4', 'videos/Harper5_1.mp4', 'videos/Harper5_2.mp4']
+      - urls: ['videos/Harper6_0.mp4', 'videos/Harper6_1.mp4', 'videos/Harper6_2.mp4']
+
+  - name: Monads and all that
+    speaker: John Hughes
+    notes:
+      - name: 'Talk Outline and Excersizes'
+        url: 'http://www.cse.chalmers.se/~rjmh/OPLSS/'
+        type: 'directory'
+    lectures:
+      - urls: ['videos/Hughes1_1.mp4', 'videos/Hughes1_2.mp4']
+      - urls: ['videos/Hughes2_1.mp4', 'videos/Hughes2_2.mp4', 'videos/Hughes2_3.mp4']
+      - urls: ['videos/Hughes3_1.mp4', 'videos/Hughes3_2.mp4', 'videos/Hughes3_3.mp4']
+      - urls: ['videos/Hughes4_1.mp4', 'videos/Hughes4_2.mp4', 'videos/Hughes4_3.mp4']
+
+  - name: Compiler verification
+    speaker: Xavier Leroy
+    notes:
+      - name: 'Talk Outline'
+        url: 'http://gallium.inria.fr/~xleroy/courses/Eugene-2012/'
+        type: 'website'
+    lectures:
+      - urls: ['videos/Leroy1_1.mp4', 'videos/Leroy1_2.mp4', 'videos/Leroy1_3.mp4']
+      - urls: ['videos/Leroy2_1.mp4', 'videos/Leroy2_2.mp4', 'videos/Leroy2_3.mp4']
+      - urls: ['videos/Leroy3_1.mp4', 'videos/Leroy3_2.mp4', 'videos/Leroy3_3.mp4']
+      - urls: ['videos/Leroy4_1.mp4', 'videos/Leroy4_2.mp4', 'videos/Leroy4_3.mp4']
+
+  - name: Language-based security
+    speaker: Andrew Myers
+    notes:
+      - name: 'Lecture Notes'
+        url: 'http://www.cs.cornell.edu/andru/classes/oplss12'
+        type: 'website'
+    lectures:
+      - urls: ['videos/Myers1_1.mp4', 'videos/Myers1_2.mp4', 'videos/Myers1_3.mp4']
+      - urls: ['videos/Myers2_1.mp4', 'videos/Myers2_2.mp4', 'videos/Myers2_3.mp4']
+      - urls: ['videos/Myers3_1.mp4', 'videos/Myers3_2.mp4']
+      - urls: ['videos/Myers4_1.mp4', 'videos/Myers4_2.mp4', 'videos/Myers4_3.mp4']
+
+  - name: Proof theory foundations
+    speaker: Frank Pfenning
+    lectures:
+      - urls: ['videos/Pfenning1_0.mp4', 'videos/Pfenning1_1.mp4', 'videos/Pfenning1_2.mp4']
+      - urls: ['videos/Pfenning2_0.mp4', 'videos/Pfenning2_1.mp4', 'videos/Pfenning2_2.mp4']
+      - urls: ['videos/Pfenning3_0.mp4', 'videos/Pfenning3_1.mp4', 'videos/Pfenning3_2.mp4']
+      - urls: ['videos/Pfenning4_0.mp4', 'videos/Pfenning4_1.mp4', 'videos/Pfenning4_2.mp4']
+
+  - name: Software foundations in Coq
+    speaker: Benjamin Pierce
+    lectures:
+      - urls: ['videos/coq1_0.mp4', 'videos/coq1_1.mp4']
+      - urls: ['videos/Pierce1_0.mp4', 'videos/Pierce1_1.mp4', 'videos/Pierce1_2.mp4']
+      - urls: ['videos/Pierce2_0.mp4', 'videos/Pierce2_1.mp4', 'videos/Pierce2_2.mp4']
+      - urls: ['videos/Pierce3_0.mp4', 'videos/Pierce3_1.mp4', 'videos/Pierce3_2.mp4']
+      - urls: ['videos/Pierce4_1.mp4', 'videos/Pierce4_2.mp4']

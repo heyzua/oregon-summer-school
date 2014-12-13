@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "$DOCKER" = "IN" ]; then
+  exec tmux -2
+fi
+
+if ! docker images | grep -q oregon; then
+  docker build -t oregon .
+fi
+
+docker run -e DOCKER=IN -i -t \
+  -v /home/gabriel:/home/gabriel:rw \
+  -u gabriel -h oregon -w $(pwd) \
+  --entrypoint "./devenv" \
+  oregon

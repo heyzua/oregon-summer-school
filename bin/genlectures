@@ -1,0 +1,207 @@
+#!/usr/bin/env ruby
+
+require 'choosy'
+require 'uri'
+require 'digest'
+require 'net/http'
+require 'fileutils'
+require 'tempfile'
+
+################################################################################
+# Utility function
+
+def format_bytes(size)
+  sizes = ['B', 'KB', 'MB', 'GB', 'TB']
+  measure = 1
+
+  sizes.each_with_index do |name, i|
+    measure *= 1024
+
+    if size < measure
+      return "#{(size.to_f / (measure / 1024)).round(2)} #{name}"
+    end
+  end
+end
+
+################################################################################
+# Main Class that downloads everything
+
+class Downloader
+  def initialize(base_url, output_dir, course)
+    @base_url, @output_dir, @course = base_url, output_dir, course
+  end
+
+  def download_videos!
+    @course['lectures'].each_with_index do |lecture, i|
+      urls = lecture['urls']
+      extension = File.extname(urls[0])
+
+      lecture_name = "#{@course['name']} - #{@course['speaker']} - Lecture #{i + 1}#{extension}"
+      path = File.join(@output_dir, lecture_name)
+      next if File.exists?(path)
+
+      lecture_parts = download_urls(urls)
+      combine_lecture_parts(lecture_parts, path)
+    end
+  end
+
+  def download_notes!(browser)
+
+  end
+
+  private
+  def download_urls(urls)
+    result = []
+    urls.each do |url|
+      extension = File.extname(url)
+      name = Digest::SHA1.new.update(url).to_s
+      path = File.join(@output_dir, "#{name}#{extension}")
+      result << path
+
+      if File.exists?(path)
+        $stdout.puts "Already downloaded '#{File.basename(url)}' to '#{path}'"
+        next
+      end
+      video = URI.join(@base_url, url)
+
+      $stdout.puts "Retrieving: #{video.to_s}"
+
+      while backoff = trying_to_retrieve_video(video, path)
+        $stderr.puts "Unable to download video: #{video.host}"
+        $stderr.puts "Retrying in #{backoff} seconds."
+        sleep(backoff * 1000)
+      end
+    end
+    result
+  end
+
+  def trying_to_retrieve_video(video, path)
+    @iteration ||= 1
+
+    Net::HTTP.start(video.host, video.port) do |http|
+      request = Net::HTTP::Get.new video
+
+      ticker = 0
+
+      http.request request do |response|
+        if response.code != "200"
+          backoff = (2.0 ** @iteration).to_i
+          @iteration += 1
+          return backoff
+        end
+
+        File.open(path, 'w') do |io|
+          size = 0
+
+          response.read_body do |chunk|
+            size += chunk.bytesize
+            if ticker == 0
+              $stdout.write "\rWriting to: #{path}    [#{format_bytes(size)}]     "
+            end
+
+            io.write chunk
+
+            ticker += 1
+            ticker %= 1000
+          end
+        end
+
+        $stdout.write "\n"
+        return nil
+      end
+    end
+  end
+
+  def combine_lecture_parts(lecture_parts, output_path)
+    $stdout.puts "Combining lecture parts into: '#{output_path}'"
+    tmp = Tempfile.new('lectures')
+    begin
+      lecture_parts.each do |video|
+        tmp.write("file '#{Dir.pwd}/#{video}'\n")
+      end
+      tmp.close
+
+      system "ffmpeg -f concat -i #{tmp.path} -codec copy \"#{output_path}\""
+      if $? != 0
+        $stderr.puts "Unable to combine mp4 files using ffmpeg."
+        exit 1
+      else
+        lecture_parts.each do |video|
+          $stdout.puts "Cleaning up intermediary file: #{video}"
+          FileUtils.rm_f(video)
+        end
+      end
+    ensure
+      tmp.close!
+    end
+  end
+end
+
+################################################################################
+# CLI
+
+$cmd = Choosy::Command.new :genlectures do
+  summary "This tool geneates a combined file from the various URLs for videos from the Oregon Summer School project."
+
+  section "Options" do
+    yaml :yaml, 
+      "The YAML file for the year you're interested in.",
+      required: true
+
+    string :course, 
+      "The regular expression that matches by course name. By default it selects all courses.",
+      default: '.*'
+
+    string :'out-dir', 
+      "The directory to put the completed lectures, by year.",
+      default: 'lectures'
+
+    boolean :videos,
+      "Whether to include the videos. Defaults to true.",
+      default: true,
+      short: false,
+      negate: 'no'
+
+    boolean :notes,
+      "Whether to include the notes. Defaults to true.",
+      default: true,
+      short: false,
+      negate: 'no'
+
+    string :browser,
+      "Whatever browser to use to open external web pages. Defaults to 'firefox'.",
+      default: 'firefox'
+  end
+
+  help
+  version "2014.12"
+
+  executor do |args, options|
+    course_match = Regexp.new(options[:course])
+    courses = []
+    options[:yaml]['courses'].each do |course|
+      if course['name'] =~ course_match
+        courses << course
+      end
+    end
+
+    if courses.length == 0
+      $stderr.puts "No matching courses"
+      exit 1
+    end
+
+    out_dir = File.join(options[:'out-dir'], options[:yaml]['year'].to_s)
+    FileUtils.mkdir_p(out_dir) unless Dir.exists?(out_dir)
+
+    courses.each do |course|
+      downloader = Downloader.new(options[:yaml]['url'], out_dir, course)
+      downloader.download_videos! if options[:videos]
+      downloader.download_notes!(options[:browser]) if options[:notes]
+    end
+  end
+end
+
+# main
+if __FILE__ == $0
+  $cmd.execute!(ARGV)
+end
