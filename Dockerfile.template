@@ -9,9 +9,8 @@ RUN apt-get install -y --force-yes ffmpeg
 
 # Configure the user
 RUN apt-get install -y zsh rlwrap tmux vim-common vim-scripts vim-nox
-RUN useradd gabriel -u 1000 -s /bin/zsh --no-create-home
-#RUN mkdir -p /etc/sudoers.d/ && echo "gabriel ALL=(ALL:ALL) NOPASSWD:ALL
-VOLUME ["/home/gabriel"]
+RUN useradd USER -u UID -s /bin/zsh --no-create-home
+VOLUME ["HOME"]
 
 # Cleanup
 USER root

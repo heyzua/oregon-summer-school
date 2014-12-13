@@ -1,5 +1,12 @@
 #!/bin/bash
 
+set -x
+
+if ! [ -f Dockerfile ]; then
+  cat Dockerfile.template | sed -e "s#HOME#${HOME}#g" -e "s/USER/${LOGNAME}/g" -e "s/UID/$(id -u ${USER})/g"
+  exit 1
+fi
+
 if [ "$DOCKER" = "IN" ]; then
   exec tmux -2
 fi
@@ -9,7 +16,7 @@ if ! docker images | grep -q oregon; then
 fi
 
 docker run -e DOCKER=IN -i -t \
-  -v /home/gabriel:/home/gabriel:rw \
-  -u gabriel -h oregon -w $(pwd) \
+  -v ${HOME}:${HOME}:rw \
+  -u ${USER} -h oregon -w $(pwd) \
   --entrypoint "./devenv" \
   oregon
