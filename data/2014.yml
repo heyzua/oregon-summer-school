@@ -64,7 +64,7 @@ courses:
       - ["media/Ulf4-1.mp4", "media/Ulf4-2.mp4", "media/Ulf4-3.mp4"]
 
   - name: Certified Programming and State
-    speakers: Greg Morrisett
+    speaker: Greg Morrisett
     lectures:
       - ["media/Greg1-1.mp4", "media/Greg1-2.mp4", "media/Greg1-3.mp4"]
       - ["media/Greg2-1.mp4", "media/Greg2-2.mp4", "media/Greg2-3.mp4"]

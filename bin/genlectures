@@ -35,8 +35,8 @@ class Downloader
     @course['lectures'].each_with_index do |urls, i|
       extension = File.extname(urls[0])
 
-      lecture_name = "#{course_name} - Lecture #{i + 1}#{extension}"
-      path = File.join(@output_dir, lecture_name)
+      lecture_name = "Lecture #{i + 1}#{extension}"
+      path = File.join(course_path, lecture_name)
       next if File.exists?(path)
 
       lecture_parts = download_urls(urls)
@@ -46,9 +46,6 @@ class Downloader
 
   def download_notes!(browser)
     return unless @course['notes']
-
-    course_path = File.join(@output_dir, course_name)
-    FileUtils.mkdir_p(course_path)
 
     @course['notes'].each do |note|
       uri = if note['url'] =~ /^https?:/
@@ -108,6 +105,12 @@ firefox #{uri.to_s}
   private
   def course_name
     "#{@course['name']} - #{@course['speaker']}"
+  end
+
+  def course_path
+    course_path = File.join(@output_dir, course_name)
+    FileUtils.mkdir_p(course_path) unless Dir.exists?(course_path)
+    course_path
   end
 
   def download_urls(urls)
