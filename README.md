@@ -1,6 +1,6 @@
 # Oregon Summer School (2012-2015)
 
-This is a small environment for downloading all of the various lectures and course notes for the Oregon Summer School in Programming Languages. It covers the years 2012-2015. In addition to downloading the video lectures, it will install ffmpeg inside a Docker container and merge the individual videos from the Oregon State website into a full lecture. It will download any pdf files linked to in the original download page and create script files for opening your browser to those pages.
+This is a small environment for downloading all of the various lectures and course notes for the Oregon Summer School in Programming Languages. It covers the years 2012-2015. In addition to downloading the video lectures, it will install ffmpeg inside a Docker container and merge the individual videos from the Oregon State website into full lectures. It will download any pdf files linked to in the original download page and create script files for opening your browser to those pages.
 
 Please note that this tool uses a Docker container to best replicate the environment in which the tool seems to work. It assumes that you have Docker already installed on your machine and that you're working in a UNIX-like environment, which defines things like the environment variables `$HOME`, `$USERNAME`, and `$SHELL`, as well as the command line tool `id`.
 
