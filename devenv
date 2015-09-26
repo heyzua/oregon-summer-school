@@ -1,19 +1,17 @@
 #!/bin/bash
 
-if ! [ -f Dockerfile ]; then
-  cat Dockerfile.template | sed -e "s#HOME#${HOME}#g" -e "s/USER/${LOGNAME}/g" -e "s/UID/$(id -u ${USER})/g" > Dockerfile
+cat Dockerfile.template | sed -e "s#HOME#${HOME}#g" \
+                              -e "s#USERNAME#${USERNAME}#g" \
+                              -e "s#SHELL#${SHELL}#g" \
+                              -e "s#UID#$(id -u ${USER})#g" \
+                              > Dockerfile
+
+if ! docker images | grep -q oregon-summer-school; then
+  docker build -t oregon-summer-school .
 fi
 
-if [ "$DOCKER" = "IN" ]; then
-  exec tmux -2
-fi
-
-if ! docker images | grep -q oregon; then
-  docker build -t oregon .
-fi
-
-docker run -e DOCKER=IN -i -t \
+docker run -i -t \
   -v ${HOME}:${HOME}:rw \
-  -u ${USER} -h oregon -w $(pwd) \
-  --entrypoint "./devenv" \
-  oregon
+  -u ${USER} -h oregon-summer-school -w $(pwd) \
+  --entrypoint "/bin/$(basename $(echo $SHELL))" \
+  oregon-summer-school

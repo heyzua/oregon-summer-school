@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+  echo "This just runs genlectures with all of the files in the 'data' directory" >&2
+  exit 0
+fi
+
 set -e
 set -x
 

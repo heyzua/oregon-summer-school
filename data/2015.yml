@@ -1,0 +1,162 @@
+name: "Types, Logic, Semantics, and Verification"
+location: "Oregon Programming Languages Summer School -- June 15-27"
+year: 2015
+url: "http://www.cs.uoregon.edu/research/summerschool/summer15/curriculum.html"
+
+courses:
+  - name: Basic Proof Theory
+    speaker: Frank Pfenning
+    notes:
+      - name: "Lecture 1"
+        url:  "http://www.cs.cmu.edu/~fp/courses/15816-s10/lectures/01-judgments.pdf"
+        type: "pdf"
+      - name: "Lecture 2"
+        url:  "http://www.cs.cmu.edu/~fp/courses/15816-s10/lectures/02-pap.pdf"
+        type: "pdf"
+      - name: "Lectures 3 and 4"
+        url:  "http://www.cs.cmu.edu/~fp/courses/15816-s10/lectures/08-seqcalc.pdf"
+        type: "pdf"
+      - name: "Lecture 4 - Student notes"
+        url:  "notes/Pfenning4notes.pdf"
+        type: "pdf"
+      - name: "Martin Lof's Lecture Notes"
+        url:  "http://www.hf.uio.no/ifikk/forskning/publikasjoner/tidsskrifter/njpl/vol1no1/meaning.pdf"
+        type: "pdf"
+      - name: "Lecture 5 - Harmony"
+        url:  "http://www.cs.cmu.edu/~fp/courses/15816-s12/lectures/03-harmony.pdf"
+        type: "pdf"
+      - name: "Lecture 5 - Reduction"
+        url:  "http://www.cs.cmu.edu/~fp/courses/15816-s12/lectures/04-reduction.pdf"
+        type: "pdf"
+      - name: "Lecture 5 - Choice"
+        url:  "http://www.cs.cmu.edu/~fp/courses/15816-s12/lectures/05-choice.pdf"
+        type: "pdf"
+      - name: "Lecture 5 - Student Notes 1"
+        url:  "notes/Pfenning5-1notes.jpg"
+        type: "pdf"
+      - name: "Lecture 5 - Student Notes 2"
+        url:  "notes/Pfenning5-2notes.jpg"
+        type: "pdf"
+    lectures:
+      - ["lectures/Pfenning1.mp4", "lectures/Pfenning2.mp4", "lectures/Pfenning3.mp4", "lectures/Pfenning4.mp4"]
+      - ["lectures/Pfenning5.mp4", "lectures/Pfenning6.mp4", "lectures/Pfenning7.mp4", "lectures/Pfenning8.mp4"]
+      - ["lectures/Pfenning9.mp4", "lectures/Pfenning10.mp4", "lectures/Pfenning11.mp4", "lectures/Pfenning12.mp4"]
+      - ["lectures/Pfenning13.mp4", "lectures/Pfenning14.mp4", "lectures/Pfenning15.mp4", "lectures/Pfenning16.mp4"]
+      - ["lectures/Pfenning17.mp4", "lectures/Pfenning18.mp4", "lectures/Pfenning19.mp4", "lectures/Pfenning20.mp4"]
+
+  - name: Introduction to Dependent Type Theory
+    speaker: Robert Harper
+    notes:
+      - name: "Lecture 4 - Student Notes"
+        url:  "notes/Harper4notes.pdf"
+        type: "pdf"
+      - name: "Lecture 5 - Student Notes"
+        url:  "notes/Harper5notes.pdf"
+        type: "pdf"
+    lectures:
+      - ["lectures/Harper1.mp4", "lectures/Harper2.mp4", "lectures/Harper3.mp4", "lectures/Harper4.mp4"]
+      - ["lectures/Harper6.mp4", "lectures/Harper7.mp4", "lectures/Harper8.mp4", "lectures/Harper9.mp4"]
+      - ["lectures/Harper10.mp4", "lectures/Harper11.mp4", "lectures/Harper12.mp4", "lectures/Harper13.mp4", "lectures/Harper14.mp4"]
+      - ["lectures/Harper15.mp4", "lectures/Harper16.mp4", "lectures/Harper17.mp4", "lectures/Harper18.mp4", "lectures/Harper19.mp4"]
+      - ["lectures/Harper20.mp4", "lectures/Harper21.mp4", "lectures/Harper22.mp4", "lectures/Harper23.mp4", "lectures/Harper24.mp4", "lectures/Harper25.mp4"]
+
+  - name: Basic Category Theory - Semantics of Proof Theory
+    speaker: Ed Morehouse
+    notes:
+      - name: "Lecture Notes"
+        url:  "intro_categorical_semantics.pdf"
+        type: "pdf"
+      - name: "Lecture 4 - Student Notes"
+        url:  "notes/Morehouse4notes.jpg"
+        type: "jpg"
+    lectures:
+      - ["lectures/Morehouse1.mp4", "lectures/Morehouse2.mp4", "lectures/Morehouse3.mp4", "lectures/Morehouse4.mp4"]
+      - ["lectures/Morehouse5.mp4", "lectures/Morehouse6.mp4", "lectures/Morehouse7.mp4", "lectures/Morehouse8.mp4"]
+      - ["lectures/Morehouse9.mp4", "lectures/Morehouse10.mp4", "lectures/Morehouse11.mp4", "lectures/Morehouse12.mp4", "lectures/Morehouse13.mp4"]
+      - ["lectures/Morehouse14.mp4", "lectures/Morehouse15.mp4", "lectures/Morehouse16.mp4", "lectures/Morehouse17.mp4"]
+      - ["lectures/Morehouse18.mp4", "lectures/Morehouse19.mp4", "lectures/Morehouse20.mp4", "lectures/Morehouse21.mp4", "lectures/Morehouse22.mp4"]
+
+  - name: Inductive and Inductive-Recursive Definitions in Intuitionistic Type Theory
+    speaker: Peter Dybjer
+    notes:
+      - name: "Hofmann"
+        url:  "https://www.dropbox.com/s/6decjvtu06lpaxb/ssdt.pdf?dl=0"
+        type: "pdf"
+      - name: "HoTT Book"
+        url:  "https://www.dropbox.com/s/5xb1fs2e1esb3nt/hott-online.pdf?dl=0"
+        type: "pdf"
+      - name: "PFPL2"
+        url:  "http://www.cs.cmu.edu/~rwh/plbook/2nded.pdf"
+        type: "pdf"
+      - name: "Lecture 1 - Exercises"
+        url:  "notes/AgdaExercises.pdf"
+        type: "pdf"
+      - name: "Lecture 1 - Web Resources"
+        url:  "http://www.cse.chalmers.se/~peterd/papers/oplss15.html"
+        type: "website"
+      - name: "Lecture 1 - LF"
+        url:  "http://www.cse.chalmers.se/~peterd/agda/LF"
+        type: "website"
+      - name: "IType"
+        url:  "http://www.cse.chalmers.se/~peterd/agda/IType"
+        type: "website"
+      - name: "MLTT"
+        url:  "http://www.cse.chalmers.se/~peterd/agda/MLTT"
+        type: "website"
+    lectures:
+      - ["lectures/Dybjer1.mp4", "lectures/Dybjer2.mp4", "lectures/Dybjer3.mp4", "lectures/Dybjer4.mp4"]
+      - ["lectures/Dybjer5.mp4", "lectures/Dybjer6.mp4", "lectures/Dybjer7.mp4", "lectures/Dybjer8.mp4"]
+      - ["lectures/Dybjer9.mp4", "lectures/Dybjer10.mp4", "lectures/Dybjer11.mp4", "lectures/Dybjer12.mp4"]
+      - ["lectures/Dybjer13.mp4", "lectures/Dybjer14.mp4", "lectures/Dybjer15.mp4", "lectures/Dybjer16.mp4"]
+      - ["lectures/Dybjer17.mp4", "lectures/Dybjer18.mp4", "lectures/Dybjer19.mp4", "lectures/Dybjer20.mp4"]
+
+  - name: The Coq Proof Assistant and Its Applications to Programming-Language Semantics
+    speaker: Adam Chlipala
+    lectures:
+      - ["lectures/Chlipala1.mp4", "lectures/Chlipala2.mp4", "lectures/Chlipala3.mp4", "lectures/Chlipala4.mp4"]
+      - ["lectures/Chlipala5.mp4", "lectures/Chlipala6.mp4", "lectures/Chlipala7.mp4", "lectures/Chlipala8.mp4"]
+      - ["lectures/Chlipala9.mp4", "lectures/Chlipala10.mp4", "lectures/Chlipala11.mp4", "lectures/Chlipala12.mp4"]
+      - ["lectures/Chlipala13.mp4", "lectures/Chlipala14.mp4", "lectures/Chlipala15.mp4", "lectures/Chlipala16.mp4"]
+      - ["lectures/Chlipala17.mp4", "lectures/Chlipala18.mp4", "lectures/Chlipala19.mp4", "lectures/Chlipala20.mp4"]
+      - ["lectures/Chlipala21.mp4", "lectures/Chlipala22.mp4", "lectures/Chlipala23.mp4", "lectures/Chlipala24.mp4"]
+
+  - name: Logical Relations
+    speaker: Amal Ahmed
+    notes:
+      - name: "Lecture 2 - Student Notes 1"
+        url:  "notes/Ahmed2-1notes.jpg"
+        type: "jpg"
+      - name: "Lecture 2 - Student Notes 2"
+        url:  "notes/Ahmed2-2notes.jpg"
+        type: "jpg"
+      - name: "Lecture 2 - Student Notes 3"
+        url:  "notes/Ahmed2-3notes.jpg"
+        type: "jpg"
+      - name: "Lecture 2 - Student Notes 4"
+        url:  "notes/Ahmed2-4notes.jpg"
+        type: "jpg"
+      - name: "Lecture 5 - Slides"
+        url:  "notes/Ahmed_lecture5.pdf"
+        type: "pdf"
+    lectures:
+      - ["lectures/Ahmed1.mp4", "lectures/Ahmed2.mp4", "lectures/Ahmed3.mp4", "lectures/Ahmed4.mp4", "lectures/Ahmed5.mp4"]
+      - ["lectures/Ahmed6.mp4", "lectures/Ahmed7.mp4", "lectures/Ahmed8.mp4", "lectures/Ahmed9.mp4", "lectures/Ahmed10.mp4"]
+      - ["lectures/Ahmed11.mp4", "lectures/Ahmed12.mp4", "lectures/Ahmed13.mp4", "lectures/Ahmed14.mp4"]
+      - ["lectures/Ahmed15.mp4", "lectures/Ahmed16.mp4", "lectures/Ahmed17.mp4", "lectures/Ahmed18.mp4"]
+      - ["lectures/Ahmed19.mp4", "lectures/Ahmed20.mp4", "lectures/Ahmed21.mp4", "lectures/Ahmed22.mp4", "lectures/Ahmed23.mp4"]
+
+  - name: The NuPRL Proof Assistant
+    speaker: Mark Bickford
+    lectures:
+      - ["lectures/Bickford1.mp4", "lectures/Bickford2.mp4", "lectures/Bickford3.mp4", "lectures/Bickford4.mp4", "lectures/Bickford5.mp4", "lectures/Bickford6.mp4"]
+      - ["lectures/Bickford7.mp4", "lectures/Bickford8.mp4", "lectures/Bickford9.mp4", "lectures/Bickford10.mp4", "lectures/Bickford11.mp4"]
+
+  - name: On Constructive Type Theory
+    speaker: Robert Constable
+    notes:
+      - name: "Notes"
+        url:  "notes/OPLSS-Short-2015-2.pdf"
+        type: "pdf"
+    lectures:
+      - ["lectures/Constable1.mp4", "lectures/Constable2.mp4", "lectures/Constable3.mp4"]
+      - ["lectures/Constable4.mp4", "lectures/Constable5.mp4", "lectures/Constable6.mp4", "lectures/Constable7.mp4", "lectures/Constable8.mp4"]
