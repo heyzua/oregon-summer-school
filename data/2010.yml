@@ -1,0 +1,155 @@
+name: "Logic, Languages, Compilation, and Verification"
+location: "Oregon Programming Languages Summer School -- June 15-25, 2010"
+year: 2010
+url: "https://www.cs.uoregon.edu/research/summerschool/summer10/curriculum.html"
+
+courses:
+  - name: Type Theory Foundations
+    speaker: Robert Harper
+    notes:
+      - name: "Girard, Lafont and Taylor: Proofs and Types"
+        url: "http://www.paultaylor.eu/stable/Proofs+Types.html"
+        type: "website"
+      - name: "Harper: Practical Foundations for Programming Languages"
+        url: "http://www.cs.cmu.edu/~rwh/plbook/book.pdf"
+        type: "pdf"
+      - name: "Pierce: Advanced Topics in Types and Programming Languages"
+        url: "http://www.cis.upenn.edu/~bcpierce/attapl/"
+        type: "website"
+    lectures:
+      - ["video/OPLSS10-15-2.mp4"]
+      - ["video/OPLSS10-15-4.mp4"]
+      - ["video/OPLSS10-16-1.mp4"]
+      - ["video/OPLSS10-17-4.mp4"]
+
+  - name: Proof Theory Foundations
+    speaker: Frank Pfenning
+    notes:
+      - name: "Lecture 1: Judgments and Propositions"
+        url: "http://www.cs.cmu.edu/~fp/courses/15816-s10/lectures/01-judgments.pdf"
+        type: "pdf"
+      - name: "Lecture 1: Slides"
+        url: "lectures/pfenning.pdf"
+        type: "pdf"
+      - name: "Lecture 2: Proofs as Programs"
+        url: "http://www.cs.cmu.edu/~fp/courses/15816-s10/lectures/02-pap.pdf"
+        type: "pdf"
+      - name: "Lecture 8: Sequent Calculus"
+        url: "http://www.cs.cmu.edu/~fp/courses/15816-s10/lectures/08-seqcalc.pdf"
+        type: "pdf"
+      - name: "Lecture 4: Focusing"
+        url: "http://www.cs.cmu.edu/~fp/courses/oregon-m10/04-focusing.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/OPLSS10-15-1.mp4"]
+      - ["video/OPLSS10-15-3.mp4"]
+      - ["video/OPLSS10-16-3.mp4"]
+      - ["video/OPLSS10-17-2.mp4"]
+
+  - name: Dependently Typed Programming
+    speaker: Conor McBride
+    notes:
+      - name: "Ornamental Algebras, Algebraic Ornaments"
+        url: "http://personal.cis.strath.ac.uk/~conor/pub/OAAO/Ornament.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/OPLSS10-22-4.mp4"]
+      - ["video/OPLSS10-23-4.mp4"]
+      - ["video/OPLSS10-24-2.mp4"]
+      - ["video/OPLSS10-25-3.mp4"]
+
+  - name: "Proofs-as-Processes: Reasoning about Concurrency in Computational Type Theory"
+    speaker: Robert Constable
+    notes:
+      - name: "Constructing Type Systems over an Operational Semantics"
+        url: "lectures/Harper-JSC92.pdf"
+        type: "pdf"
+      - name: "Lecture 1 Slides"
+        url: "lectures/Constable-lecture1.pdf"
+        type: "pdf"
+      - name: "Lecture 4 Slides"
+        url: "lectures/Constable-lecture4.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/OPLSS10-21-2.mp4"]
+      - ["video/OPLSS10-21-4.mp4"]
+      - ["video/OPLSS10-22-3.mp4"]
+      - ["video/OPLSS10-23-3.mp4"]
+
+  - name: "Programming Language Methods for Compositional Security"
+    speaker: Anupam Datta
+    notes:
+      - name: "Protocol Composition Logic (PCL)"
+        url: "http://www.andrew.cmu.edu/user/danupam/ddmr-pcl06.pdf"
+        type: "pdf"
+      - name: "Secrecy Analysis in Protocol Composition Logic"
+        url: "http://www.andrew.cmu.edu/user/danupam/rddm-asian06.pdf"
+        type: "pdf"
+      - name: "Compositional System Security with Interface-Confined Adversaries"
+        url: "http://www.andrew.cmu.edu/user/danupam/gfkd-mfps2010.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/OPLSS10-18-2.mp4"]
+      - ["video/OPLSS10-18-4.mp4"]
+      - ["video/OPLSS10-19-1.mp4"]
+      - ["video/OPLSS10-19-3.mp4"]
+
+  - name: "Proving a Compiler: Mechanized Verification of Program Transformations and Static Analyses"
+    speaker: Xavier Leroy
+    lectures:
+      - ["video/OPLSS10-22-1.mp4"]
+      - ["video/OPLSS10-23-2.mp4"]
+      - ["video/OPLSS10-24-1.mp4"]
+      - ["video/OPLSS10-24-3.mp4"]
+      - ["video/OPLSS10-25-2.mp4"]
+
+  - name: "Ynot Programming"
+    speaker: Greg Morrisett
+    notes:
+      - name: "Abstract Predicates and Mutable ADTs in Hoare Type Theory"
+        url: "http://ynot.cs.harvard.edu/papers/esop07.pdf"
+        type: "pdf"
+      - name: "Hoare Type Theory, Polymorphism and Separation"
+        url: "http://ynot.cs.harvard.edu/papers/jfpsep07.pdf"
+        type: "pdf"
+      - name: "Ynot: Reasoning with the Awkward Squad"
+        url: "http://ynot.cs.harvard.edu/papers/ynot08.pdf"
+        type: "pdf"
+      - name: "Effective Interactive Proofs for Higher-Order Imperative Programs"
+        url: "http://ynot.cs.harvard.edu/papers/icfp09.pdf"
+        type: "pdf"
+      - name: "First-order unification by structural recursion"
+        url: "http://strictlypositive.org/unify.ps.gz"
+        type: "ps.gz"
+      - name: "Certified Programming with Dependent Types"
+        url: "http://adam.chlipala.net/cpdt/"
+        type: "website"
+      - name: "Lecture 1"
+        url: "morrisett1.pdf"
+        type: "pdf"
+      - name: "Lecture 2"
+        url: "morrisett2.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/OPLSS10-22-2.mp4"]
+      - ["video/OPLSS10-23-1.mp4"]
+      - ["video/OPLSS10-24-4.mp4"]
+      - ["video/OPLSS10-25-1.mp4"]
+
+  - name: "Software Foundations in Coq"
+    speaker: Benjamin Pierce
+    lectures:
+      - ["video/OPLSS10-18-1.mp4"]
+      - ["video/OPLSS10-18-3.mp4"]
+      - ["video/OPLSS10-19-2.mp4"]
+      - ["video/OPLSS10-19-4.mp4"]
+      - ["video/OPLSS10-21-1.mp4"]
+      - ["video/OPLSS10-21-3.mp4"]
+
+  - name: Essential Coq from Scratch
+    speaker: Andrew Tolmach
+    lectures:
+      - ["video/OPLSS10-16-2.mp4"]
+      - ["video/OPLSS10-16-4.mp4"]
+      - ["video/OPLSS10-17-1.mp4"]
+      - ["video/OPLSS10-17-3.mp4"]

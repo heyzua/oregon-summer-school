@@ -39,23 +39,25 @@ class Downloader
             end
 
       case note['type']
-      when 'pdf' then download_pdf!(note, uri)
       when 'website' then download_website!(note, uri, browser)
       when 'directory' then download_directory!(note, uri)
-      when 'jpg'
       else
-        $stderr.puts "Unknown note type: '#{note['type']}' for '#{note['name']}'"
-        exit 1
+        download_file!(note, uri)
       end
     end
   end
 
   private
-  def download_pdf!(note, uri)
-    pdf_path = File.join(course_path, "#{note['name']}.pdf")
+  def download_file!(note, uri)
+    file_path = File.join(course_path, "#{note['name']}.#{note['type']}")
 
-    while_unable_to_download(uri, pdf_path) do
-      $stderr.puts "Unable to download pdf: #{uri.to_s}"
+    while_unable_to_download(uri, file_path) do
+      $stderr.puts "Unable to download file: #{uri.to_s}"
+    end
+
+    case note['type']
+    when 'ps.gz' then `gunzip #{file_path}` && FileUtils.rm file_path
+    when 'zip' then `unzip #{file_path}` && FileUtils.rm file_path
     end
   end
 
@@ -88,14 +90,6 @@ set -e
           $stderr.puts "Unable to download: #{uri.to_s}"
         end
       end
-    end
-  end
-
-  def download_jpg!(note, uri)
-    jpg_path = File.join(course_path, "#{note['name']}.jpg")
-
-    while_unable_to_download(uri, jpg_path) do
-      $stderr.puts "Unable to download jpg: #{uri.to_s}"
     end
   end
 

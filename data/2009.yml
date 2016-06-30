@@ -1,0 +1,115 @@
+name: "Theory and Practice of Language Implementation"
+location: "Oregon Programming Languages Summer School -- July 23-31"
+year: 2009
+url: "https://www.cs.uoregon.edu/research/summerschool/summer09"
+
+courses:
+  - name: Garbage Collection and the Metronome GC
+    speaker: David Bacon
+    notes:
+      - name: "Lecture 1"
+        url: "lectures/BaconDFBLecture1.pdf"
+        type: "pdf"
+      - name: "Lecture 2"
+        url: "lectures/BaconDFBLecture2.pdf"
+        type: "pdf"
+      - name: "Lecture 3"
+        url: "lectures/BaconDFBLecture3.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/20090729-2-bacon.mp4"]
+
+  - name: Algorithmic Program Synthesis
+    speaker: Ras Bodik
+    lectures:
+      - ["video/20090723-1-bodik.mp4"]
+      - ["video/20090724-2-bodik.mp4"]
+
+  - name: Abstract Interpretation
+    speaker: Patrick Cousot
+    lectures:
+      - ["video/20090730-2-cousot.mp4"]
+      - ["video/20090730-4-cousot.mp4"]
+      - ["video/20090731-1-cousot.mp4"]
+
+  - name: Continuations to Go
+    speaker: Olivier Danvy
+    notes:
+      - name: "On Reasoning about Recursive Programs using Structural Induction"
+        url: "lectures/danvy-pg.pdf"
+        type: "pdf"
+      - name: "Representing Control"
+        url: "lectures/danvy-filinski-mscs92.ps"
+        type: "ps"
+      - name: "Three Steps for the CPS Transformation"
+        url: "lectures/danvy-3steps.ps"
+        type: "ps"
+      - name: "An Analytical Approach to Program as Data Objects"
+        url: "lectures/danvy-dissertation.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/20090723-2-danvy.mp4"]
+      - ["video/20090723-4-danvy.mp4"]
+      - ["video/20090724-3-danvy.mp4"]
+      - ["video/20090728-B-danvy.mp4"]
+      - ["video/20090730-B-danvy.mp4"]
+
+  - name: "Art of Invariant Generation applied to Symbolic Bound Computation"
+    speaker: Sumit Gulwani
+    notes: 
+      - name: "Pre-lecture assignment"
+        url: "lectures/sumit-pre.pdf"
+        type: "pdf"
+      - name: "Lecture 1"
+        url: "lectures/sumit1.pdf"
+        type: "pdf"
+      - name: "Lecture 2"
+        url: "lectures/sumit2.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/20090727-4-gulwani.mp4"]
+      - ["video/20090728-2-gulwani.mp4"]
+      - ["video/20090729-1-gulwani.mp4"]
+
+  - name: "Managed Runtime Environments: Implementations and Opportunities"
+    speaker: Chandra Krintz
+    lectures:
+      - ["video/20090727-1-krintz.mp4"]
+      - ["video/20090728-3-krintz.mp4"]
+      - ["video/20090729-4-krintz.mp4"]
+    
+  - name: Pointer analysis
+    speaker: Ondrej Lhotak
+    notes:
+      - name: "Lecture Notes"
+        url: "lectures/lhotak.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/20090730-1-lhotak.mp4"]
+      - ["video/20090731-2-lhotak.mp4"]
+
+  - name: "Control-flow Analysis of Higher-Order Languages"
+    speaker: Matt Might
+    notes:
+      - name: "Lecture 1"
+        url: "lectures/might2009cfa1-talk.pdf"
+        type: "pdf"
+      - name: "Lecture 2"
+        url: "lectures/might2009cfa2-talk.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/20090723-3-might.mp4"]
+      - ["video/20090724-1-might.mp4"]
+      - ["video/20090727-2-might.mp4"]
+
+  - name: "Multi-Threaded Programming and Transactional Memory"
+    speaker: Yannis Smaragdakis
+    notes:
+      - name: "Lecture Notes"
+        url: "lectures/yannis09.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/20090727-3-smaragdakis.mp4"]
+      - ["video/20090729-3-smaragdakis.mp4"]
+      - ["video/20090729-B-smaragdakis.mp4"]
+ 

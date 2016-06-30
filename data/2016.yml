@@ -1,0 +1,59 @@
+name: "Types, Logic, Semantics, and Verification"
+location: "Oregon Programming Languages Summer School -- June 15-27"
+year: 2016
+url: "http://www.cs.uoregon.edu/research/summerschool/summer16/curriculum.php"
+
+courses:
+  - name: Programming Languages Background
+    speaker: Robert Harper & Dan Licata
+    notes:
+      - name: "Practical Foundations for Programming Languages"
+        url: "http://www.cs.cmu.edu/~rwh/pfpl/2nded.pdf" 
+        type: "pdf"
+    lectures:
+      - ["lectures/Harper1-1.mp4", "lectures/Harper1-2.mp4", "lectures/Harper1-3.mp4", "lectures/Harper1-4.mp4"]
+      - ["lectures/Licata1-1.mp4", "lectures/Licata1-2.mp4", "lectures/Licata1-3.mp4", "lectures/Licata1-4.mp4"]
+      - ["lectures/Harper2-1.mp4", "lectures/Harper2-2.mp4", "lectures/Harper2-3.mp4", "lectures/Harper2-4.mp4"]
+      - ["lectures/Harper3-1.mp4", "lectures/Harper3-2.mp4", "lectures/Harper3-3.mp4", "lectures/Harper3-4.mp4"]
+      - ["lectures/Licata2-1.mp4", "lectures/Licata2-2.mp4", "lectures/Licata2-3.mp4", "lectures/Licata2-4.mp4"]
+      - ["lectures/Harper4-1.mp4", "lectures/Harper4-2.mp4", "lectures/Harper4-3.mp4", "lectures/Harper4-4.mp4"]
+      - ["lectures/Licata3-1.mp4", "lectures/Licata3-2.mp4", "lectures/Licata3-3.mp4", "lectures/Licata3-4.mp4"]
+  - name: Category Theory Background
+    speaker: Ed Morehouse
+    lectures:
+    - ["lectures/Morehouse1-1.mp4", "lectures/Morehouse1-2.mp4", "lectures/Morehouse1-3.mp4"]
+    - ["lectures/Morehouse2-1.mp4", "lectures/Morehouse2-2.mp4", "lectures/Morehouse2-3.mp4", "lectures/Morehouse2-4.mp4"]
+    - ["lectures/Morehouse3-1.mp4", "lectures/Morehouse3-2.mp4", "lectures/Morehouse3-3.mp4", "lectures/Morehouse3-4.mp4"]
+    - ["lectures/Morehouse4-1.mp4", "lectures/Morehouse4-2.mp4", "lectures/Morehouse4-3.mp4", "lectures/Morehouse4-4.mp4"]
+  - name: Logical Relations
+    speaker: Patricia Johann
+    notes:
+      - name: "MFPS'15 paper with appendix"
+        url: "http://www.cs.appstate.edu/~johannp/mfps15-ext.pdf"
+        type: "pdf"
+      - name: "Lecture 1"
+        url: "notes/johann-lecture1-slides.pdf"
+        type: "pdf"
+      - name: "Exercises 1"
+        url: "http://www.cs.appstate.edu/~johannp/lecture1-exercises.pdf"
+        type: "pdf"
+      - name: "Lecture 2"
+        url: "notes/johann-lecture2-slides.pdf"
+        type: "pdf"
+      - name: "Exercises 2"
+        url: "http://www.cs.appstate.edu/~johannp/lecture2-exercises.pdf"
+        type: "pdf"
+      - name: "Lecture 3"
+        url: "notes/johann-lecture3-slides.pdf"
+        type: "pdf"
+      - name: "Exercises 3"
+        url: "http://www.cs.appstate.edu/~johannp/lecture3-exercises.pdf"
+        type: "pdf"
+      - name: "Lecture 4"
+        url: "notes/johann-lecture4-slides.pdf"
+        type: "pdf"
+      - name: "Exercises 4"
+        url: "http://www.cs.appstate.edu/~johannp/lecture4-exercises.pdf"
+        type: "pdf"
+    lectures:
+      - ["lectures/Johann1-1.mp4", "lectures/Johann1-2.mp4", "lectures/Johann1-3.mp4", "lectures/Johann1-4.mp4"]

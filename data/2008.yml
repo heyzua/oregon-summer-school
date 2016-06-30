@@ -1,0 +1,126 @@
+name: "Logic and Theorem Proving in Programming Languages"
+location: "Oregon Programming Languages Summer School -- July 22-30"
+year: 2008
+url: "https://www.cs.uoregon.edu/research/summerschool/summer08/"
+
+courses:
+  - name: Introduction
+    speaker: Matthew Fluett
+    notes:
+      - name: "Lecture Notes"
+        url: "lectures/intro.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/July22Lect1.wmv"]
+
+  - name: "SMT Solvers - Theory, Implementation and Applications"
+    speaker: Leonardo de Moura
+    notes:
+      - name: "Lecture Notes"
+        url: "http://research.microsoft.com/~leonardo/oregon08.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/July28Lect2.wmv"]
+      - ["video/July29Lect4.wmv"]
+      - ["video/July30Lect1.wmv"]
+
+  - name: "Mechanization of Metatheory Using lf and twelf"
+    speaker: Robert Harper
+    notes:
+      - name: "Mechanizing Metatheory in a Logical Framework"
+        url: "http://www.cs.cmu.edu/~rwh/papers/mech/jfp07.pdf"
+        type: "pdf"
+      - name: "Practical Foundations for Programming Languages"
+        url: "http://www.cs.cmu.edu/~rwh/plbook/book.pdf"
+        type: "pdf"
+      - name: "http://www.cs.cmu.edu/~rwh/talks/UO_Summer08.pdf"
+        url: "Mechanizing Metatheory Using LF and Twelf Lecture Notes"
+        type: "pdf"
+    lectures:
+      - ["video/July22Lect2.wmv"]
+      - ["video/July23Lect3.wmv"]
+      - ["video/July24Lect2.wmv"]
+
+  - name: "Compiler Construction in Formal Logical Frameworks"
+    speaker: Jason Hickey
+    notes:
+      - name: "Lecture Notes"
+        url: "lectures/hickey.pdf"
+        type: "pdf"
+    lectures:
+      - ["video/July28Lect3.wmv"]
+      - ["video/July29Lect1.wmv"]
+      - ["video/July30Lect3.wmv"]
+
+  - name: "Specification and Verification of Programs with Pointers"
+    speaker: Rustan Leino
+    notes:
+      - name: "Related Talks"
+        url: "http://research.microsoft.com/~leino/talks.html"
+        type: "website"
+      - name: "Lecture 1"
+        url: "http://research.microsoft.com/~leino/papers/Oregon-2008-part-0.pptx"
+        type: "pptx"
+      - name: "Lecture 2"
+        url: "http://research.microsoft.com/~leino/papers/Oregon-2008-part-1.pptx"
+        type: "pptx"
+    lectures:
+      - ["video/July28Lect1.wmv"]
+      - ["video/July29Lect3.wmv"]
+
+  - name: "Leveraging Domain-Specific Languages for Reasoning"
+    speaker: Sorin Lerner
+    lectures:
+      - ["video/July28Lect4.wmv"]
+      - ["video/July29Lect2.wmv"]
+      - ["video/July30Lect2.wmv"]
+
+  - name: "Reasoning About Programs with ACL2"
+    speaker: Pete Manolios
+    lectures:
+      - ["video/July22Lect3.wmv"]
+      - ["video/July23Lect2.wmv"]
+      - ["video/July23Lect4.wmv"]
+
+  - name: "Putting the Curry-Howard Isomorphism to Work"
+    speaker: Tim Sheard
+    notes:
+      - name: "Lecture Materials"
+        url: "http://web.cecs.pdx.edu/~sheard/EugeneSumSch.zip"
+        type: "zip"
+      - name: "Lecture 1"
+        url: "lectures/Sheard1.pdf"
+        type: "pdf"
+      - name: "Lecture 2"
+        url: "lectures/Sheard2.pdf"
+        type: "pdf"
+      - name: "Lecture 3"
+        url: "lectures/Sheard3.pdf"
+    lectures:
+      - ["video/July24Lect4.wmv"]
+      - ["video/July25Lect2.wmv"]
+      - ["video/July26Lect1.wmv"]
+
+  - name: Nominal Techniques
+    speaker: Christian Urban
+    notes:
+      - name: "Lecture notes and examples"
+        url: "http://isabelle.in.tum.de/nominal/oregon.html"
+        type: "website"
+    lectures:
+      - ["video/July24Lect1.wmv"]
+      - ["video/July25Lect3.wmv"]
+      - ["video/July26Lect2.wmv"]
+
+  - name: "Coq for Programming Language Metatheory"
+    speaker: "Stephanie Weirich and Brian Aydemir"
+    notes:
+      - name: "Coq required software and code for lectures"
+        url: "http://www.cis.upenn.edu/~plclub/oregon08/"
+        type: "website"
+    lectures:
+      - ["video/July22Lect4.wmv"]
+      - ["video/July23Lect1.wmv"]
+      - ["video/July24Lect3.wmv"]
+      - ["video/July25Lect1.wmv"]
+    

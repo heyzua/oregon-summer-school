@@ -1,0 +1,232 @@
+name: "Types, Semantics, and Verification"
+locaion: "Oregon Programming Languages Summer School — June 16-July 1, 2011"
+year: 2011
+url: "https://www.cs.uoregon.edu/research/summerschool/summer11/curriculum.html"
+  
+courses:
+  - name: Logical Relations
+    speaker: Amal Ahmed
+    lectures:
+      - ["videos/062403.mov"]
+      - ["videos/062504-1.mov", "videos/062504-2.mov", "videos/062504-3.mov", "videos/062504-4.mov"]
+      - ["videos/062701.mov"]
+      - ["videos/062703-1.mov", "videos/062703-2.mov", "videos/062703-3.mov", "videos/062703-4.mov", "videos/062703-5.mov"]
+  - name: Software Verification
+    speaker: Andrew Appel
+    lectures:
+      - ["videos/062402.mov"]
+      - ["videos/062404.mov"]
+      - ["videos/062501-1.mov", "videos/062501-2.mov", "videos/062501-3.mov"]
+  - name: Monadic Effects
+    speaker: Nick Benton
+    notes:
+      - name: "Lectures 1 & 2 Notes"
+        url: "lectures/MonadicEffects1&2.pdf"
+        type: "pdf"
+      - name: "Lecture 3 Notes"
+        url: "lectures/MonadicEffects3.pdf"
+        type: "pdf"
+      - name: "Lecture 4 Notes"
+        url: "lectures/MonadicEffects4.pdf"
+        type: "pdf"
+      - name: "Lecture 5 Notes"
+        url: "lectures/MonadicEffects5.pdf"
+        type: "pdf"
+    - lectures:
+        - ["videos/062002-1.mov", "videos/062002-2.mov", "videos/062002-3.mov", "videos/062002-4.mov", "videos/062002-5.mov", "videos/062002-6.mov"]
+        - ["videos/062004.mov"]
+        - ["videos/062103.mov"]
+        - ["videos/062202.mov"]
+        - ["videos/062304-1.mov", "videos/062304-2.mov", "videos/062304-3.mov"]
+  - name: Polymorphic Logic
+    speaker: Robert Constable
+    notes:
+      - name: "Boolean Valuations and Truth Sets"
+        url: "lectures/Smullyan-Bval-1-2.pdf"
+        type: "pdf"
+      - name: "Polymorphic Logic"
+        url: "lectures/polymorphic-logic.pdf"
+        type: "pdf"
+    lectures:
+      - ["videos/063003-1.mov", "videos/063003-2.mov", "videos/063003-3.mov"]
+      - ["videos/070104-1.mov", "videos/070104-2.mov"]
+  - name: Polarisation and Focusing
+    speaker: Pierre-Louis Curien
+    notes:
+      - name: "The duality of computation"
+        url: "lectures/icfp-CuHer00-duality+errata.pdf"
+        type: "pdf"
+      - name: "The duality of computation under focus"
+        url: "lectures/TCS-2010.pdf"
+        type: "pdf"
+      - name: "Complimentary Notes"
+        url: "lectures/system-L-illust.pdf"
+        type: "pdf"
+    lectures:
+      - ["videos/062901.mov"]
+      - ["videos/062904-1.mov", "videos/062904-2.mov", "videos/062904-3.mov", "videos/062904-4.mov"]
+      - ["videos/063002.mov"]
+      - ["videos/070102.mov"]
+  - name: Type Theory Foundation
+    speaker: Robert Harper
+    notes:
+      - name: "Girard, Lafont and Taylor: Proofs and Types"
+        url: "http://www.paultaylor.eu/stable/Proofs+Types.html"
+        type: "pdf"
+      - name: "Harper: Practical Foundations for Programming Languages"
+        url: "http://www.cs.cmu.edu/~rwh/plbook/book.pdf"
+        type: "pdf"
+      - name: "Pierce: Advanced Topics in Types and Programming Languages"
+        url: "http://www.cis.upenn.edu/~bcpierce/attapl/"
+        type: "pdf"
+      - name: "Normalization for Goedel's System T"
+        url: "lectures/harper-Norm-SystemT.pdf"
+    lectures:
+      - ["videos/061602.mov"]
+      - ["videos/061701.mov"]
+      - ["videos/061802.mov"]
+      - ["videos/061901.mov"]
+      - ["videos/062001-1.mov", "videos/062001-2.mov", "videos/062001-3.mov", "videos/062001-4.mov", "videos/062001-5.mov", "videos/062001-6.mov", "videos/062001-7.mov"]
+  - name: The Calculus of Inductive Constructions
+    speaker: Hugo Herbelin
+    notes:
+      - name: "Lecture Notes"
+        url: "lectures/oplss-herbelin1.pdf"
+    lectures:
+      - ["videos/062704-1.mov", "videos/062704-2.mov", "videos/062704-3.mov", "videos/062704-4.mov"]
+      - ["videos/062804-1.mov", "videos/062804-2.mov", "videos/062804-3.mov", "videos/062804-4.mov"]
+      - ["videos/062902.mov"]
+      - ["videos/063001.mov"]
+  - name: Compiler Certification
+    speaker: Xavier Leroy
+    notes:
+      - name: Eugene-2010
+        url: "http://gallium.inria.fr/~xleroy/courses/Eugene-2010/"
+        type: "website"
+      - name: "Coinductive big-step operational semantics."
+        url: "http://gallium.inria.fr/~xleroy/bibrefs/Leroy-Grall-coindsem.html"
+        type: "website"
+      - name: "A formally verified compiler back-end."
+        url: "http://gallium.inria.fr/~xleroy/publi/compcert-backend.pdf"
+        type: "pdf"
+      - name: "Structural abstract interpretation, A formal study using Coq."
+        url: "http://hal.inria.fr/inria-00329572/fr/"
+        type: "website"
+      - name: "Abstract Interpretation."
+        url: "http://web.mit.edu/16.399/www/"
+        type: "website"
+    lectures:
+      - ["videos/062803-1.mov", "videos/062803-2.mov", "videos/062803-3.mov", "videos/062803-4.mov", "videos/062803-5.mov"]
+      - ["videos/062903-1.mov", "videos/062903-2.mov", "videos/062903-3.mov", "videos/062903-4.mov"]
+      - ["videos/063004-1.mov", "videos/063004-2.mov", "videos/063004-3.mov"]
+      - ["videos/070101.mov"]
+      - ["videos/070104-1.mov", "videos/070104-2.mov"]
+  - name: Programming languages in string diagrams
+    speaker: Paul-Andre Mellies
+    notes:
+      - name: "Lecture Materials"
+        url: "http://www.pps.jussieu.fr/~mellies/Oregon-Summer-School-2011.html"
+        type: "pdf"
+    lectures:
+      - ["videos/061603.mov"]
+      - ["videos/061702.mov"]
+      - ["videos/061704.mov"]
+      - ["videos/061801-1.mov", "videos/061801-2.mov", "videos/061803.mov"]
+
+  - name: Imperative Programming in Coq
+    speaker: Greg Morrisett
+    notes:
+      - name: "Online Materials"
+        url: "http://www.eecs.harvard.edu/~greg/oplss/"
+        type: "pdf"
+    lectures:
+      - ["videos/062401.mov"]
+      - ["videos/062502-1.mov", "videos/062502-2.mov", "videos/062502-3.mov", "videos/062502-4.mov", "videos/062502-5.mov"]
+      - ["videos/062702.mov"]
+
+  - name: Proof Theory Foundation
+    speaker: Frank Pfenning
+    notes:
+      - name: "Lecture Notes on bidirectional typechecking"
+        url: "http://www.cs.cmu.edu/~fp/courses/15312-f04/handouts/15-bidirectional.pdf"
+        type: "pdf"
+      - name: "Lecture 1: Judgments and Propositions"
+        url: "http://www.cs.cmu.edu/~fp/courses/15816-s10/lectures/01-judgments.pdf">
+        type: "pdf"
+      - name: "Lecture 2: Proofs as Programs"
+        url: "http://www.cs.cmu.edu/~fp/courses/15816-s10/lectures/02-pap.pdf"
+        type: "pdf"
+      - name: "Lecture 8: Sequent Calculus"
+        url: "http://www.cs.cmu.edu/~fp/courses/15816-s10/lectures/08-seqcalc.pdf"
+        type: "pdf"
+      - name: "Lecture 4: Focusing"
+        url: "http://www.cs.cmu.edu/~fp/courses/oregon-m10/04-focusing.pdf"
+        type: "pdf"
+      - name: "Frank Pfenning and Andre; Platzer. Modal logic."
+        url: "http://www.cs.cmu.edu/~fp/courses/15816-s10/schedule.html"
+        type: "website"
+      - name: "Frank Pfenning and Rowan Davies. A judgmental reconstruction of modal logic."
+        url: "http://www.cs.cmu.edu/~fp/papers/mscs00.pdf"
+        type: "pdf"
+      - name: "Frank Pfenning. Structural cut elimination I. Intuitionistic and classical logic."
+        url: "http://www.cs.cmu.edu/~fp/papers/ic00.pdf"
+        type: "pdf"
+      - name: "Chuck Liang and Dale Miller. Focusing and polarization in linear, intuitionistic, and classical logics."
+        url: "http://www.lix.polytechnique.fr/Labo/Dale.Miller/papers/tcs09.pdf"
+        type: "pdf"
+      - name: "Sean McLaughlin and Frank Pfenning. Efficient intuitionistic theorem proving with the polarized inverse method."
+        url: "http://www.cs.cmu.edu/~fp/papers/cade09.pdf"
+        type: "pdf"
+    lectures:
+      - ["videos/061601.mov"]
+      - ["videos/061604.mov"]
+      - ["videos/061703.mov"]
+      - ["videos/061804.mov"]
+
+  - name: Proof Theory in Coq
+    speaker: Benjamin Pierce
+    lectures:
+      - ["videos/061902.mov"]
+      - ["videos/062003-3.mov", "videos/062003-4.mov", "videos/062003-5.mov", "videos/062003-6.mov", "videos/062003-7.mov", "videos/062003-8.mov", "videos/062003-9.mov", "videos/062003-10.mov"]
+      - ["videos/062104.mov"]
+  - name: Semilattices, Domains, and Computability
+    speaker: Dana Scott
+    notes:
+      - name: "Notes 1"
+        url: "lectures/SemiAxioms.pdf"
+        type: "pdf"
+      - name: "Notes 2"
+        url: "lectures/DomAxiom.ps"
+        type: "ps"
+    lectures:
+      - ["videos/062102.mov"]
+      - ["videos/062303-1.mov", "videos/062303-2.mov", "videos/062303-3.mov", "videos/062303-4.mov"]
+
+  - name: "What is a Proof?: Some Challenges for Automated Theorem Proving"
+    speaker: Dana Scott
+    notes:
+      - name: "Notes"
+        url: "lectures/ScottProofTalk.ps"
+        type: "ps"
+    lectures:
+      - ["videos/062205-1.mov", "videos/062205-2.mov"]
+
+  - name: Formal Verification in Industry
+    speaker: John Harrison
+    lectures:
+      - ["videos/062805-1.mov"]
+      - ["videos/062805-2.mov"]
+      - ["videos/062805-3.mov"]
+      - ["videos/062805-4.mov"]
+
+  - name: Design Issues for Implemented Type Theories
+    speaker: Robert Constable
+    notes:
+      - name: "Design Issues for Implemented Type Theories"
+        url: "lectures/DesignIssuesforImplementedTypeTheories-OPLSS.pdf"
+        type: "pdf"
+      - name: "The Triumph of Types"
+        url: "lectures/Triumph-of-Types-Extended.pdf"
+    lectures:
+      - ["videos/062905-1.mov", "videos/062905-2.mov", "videos/062905-3.mov", "videos/062905-4.mov"]
+
