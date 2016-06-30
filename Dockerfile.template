@@ -9,7 +9,7 @@ RUN apt-get install -y --force-yes ffmpeg
 
 # Configure the user
 RUN apt-get install -y zsh rlwrap vim-common vim-scripts vim-nox
-RUN useradd USERNAME -u UID -s /bin/SHELL --no-create-home
+RUN useradd USERNAME -u UID -s SHELL --no-create-home
 VOLUME ["HOME"]
 
 # Cleanup
